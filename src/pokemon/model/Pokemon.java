@@ -48,4 +48,92 @@ public abstract class Pokemon
 		
 	}
 
+	/**
+	 * @return the healthPoints
+	 */
+	public int getHealthPoints()
+	{
+		return healthPoints;
+	}
+
+	/**
+	 * @param healthPoints the healthPoints to set
+	 */
+	public void setHealthPoints(int healthPoints)
+	{
+		this.healthPoints = healthPoints;
+	}
+
+	/**
+	 * @return the atttackPoints
+	 */
+	public int getAtttackPoints()
+	{
+		return atttackPoints;
+	}
+
+	/**
+	 * @param atttackPoints the atttackPoints to set
+	 */
+	public void setAtttackPoints(int atttackPoints)
+	{
+		this.atttackPoints = atttackPoints;
+	}
+
+	/**
+	 * @return the enhancementModifiers
+	 */
+	public double getEnhancementModifiers()
+	{
+		return enhancementModifiers;
+	}
+
+	/**
+	 * @param enhancementModifiers the enhancementModifiers to set
+	 */
+	public void setEnhancementModifiers(double enhancementModifiers)
+	{
+		this.enhancementModifiers = enhancementModifiers;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName()
+	{
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+	/**
+	 * @return the canEvolve
+	 */
+	public boolean isCanEvolve()
+	{
+		return canEvolve;
+	}
+
+	/**
+	 * @param canEvolve the canEvolve to set
+	 */
+	public void setCanEvolve(boolean canEvolve)
+	{
+		this.canEvolve = canEvolve;
+	}
+
+	/**
+	 * @return the number
+	 */
+	public int getNumber()
+	{
+		return number;
+	}
+
 }
