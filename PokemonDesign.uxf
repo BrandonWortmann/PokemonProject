@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
+      <x>14</x>
       <y>441</y>
       <w>231</w>
       <h>63</h>
@@ -96,7 +96,7 @@ bg=red
     <id>UMLClass</id>
     <coordinates>
       <x>490</x>
-      <y>119</y>
+      <y>126</y>
       <w>231</w>
       <h>133</h>
     </coordinates>
@@ -110,13 +110,14 @@ bg=red
 - enhancementModifier : double
 --
 + Pokemon(int, String) : constructor
-</panel_attributes>
++ toString : String
+bg=dark_gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
+      <x>224</x>
       <y>315</y>
       <w>231</w>
       <h>63</h>
@@ -164,8 +165,8 @@ bg=red
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>784</x>
-      <y>567</y>
+      <x>910</x>
+      <y>413</y>
       <w>231</w>
       <h>70</h>
     </coordinates>
@@ -196,79 +197,79 @@ bg=red
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>644</x>
-      <y>245</y>
-      <w>266</w>
-      <h>336</h>
+      <x>658</x>
+      <y>252</y>
+      <w>350</w>
+      <h>175</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;360.0;460.0</additional_attributes>
+    <additional_attributes>10.0;10.0;480.0;160.0;480.0;230.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>665</x>
-      <y>245</y>
-      <w>119</w>
-      <h>203</h>
+      <x>623</x>
+      <y>252</y>
+      <w>161</w>
+      <h>196</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;270.0</additional_attributes>
+    <additional_attributes>10.0;10.0;210.0;260.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>686</x>
       <y>245</y>
-      <w>553</w>
+      <w>567</w>
       <h>308</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;770.0;420.0</additional_attributes>
+    <additional_attributes>10.0;20.0;790.0;10.0;770.0;420.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>539</x>
-      <y>245</y>
+      <y>252</y>
       <w>49</w>
-      <h>196</h>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;260.0</additional_attributes>
+    <additional_attributes>50.0;10.0;10.0;250.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>245</y>
-      <w>84</w>
-      <h>84</h>
+      <x>364</x>
+      <y>252</y>
+      <w>140</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>100.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>180.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>182</x>
+      <x>196</x>
       <y>371</y>
-      <w>175</w>
+      <w>105</w>
       <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>230.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>130.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>161</x>
+      <x>175</x>
       <y>497</y>
-      <w>91</w>
+      <w>77</w>
       <h>203</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>110.0;270.0;10.0;10.0</additional_attributes>
+    <additional_attributes>90.0;270.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -286,11 +287,11 @@ bg=red
     <coordinates>
       <x>252</x>
       <y>371</y>
-      <w>154</w>
+      <w>98</w>
       <h>329</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;450.0;200.0;10.0</additional_attributes>
+    <additional_attributes>10.0;450.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -329,11 +330,11 @@ bg=red
     <id>Relation</id>
     <coordinates>
       <x>777</x>
-      <y>630</y>
-      <w>140</w>
-      <h>77</h>
+      <y>476</y>
+      <w>266</w>
+      <h>231</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;90.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;310.0;360.0;10.0</additional_attributes>
   </element>
 </diagram>
