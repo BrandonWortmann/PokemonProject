@@ -79,8 +79,45 @@ public class PokedexPanel extends JPanel
 		thirdType = new JPanel();
 		fourthType = new JPanel();
 		
+		setupPanel();
+		setupLayout();
+		setupComboBox();
 	}
 	
+	
+	private void setupPanel()
+	{
+		this.add(evolvableBox);
+		this.add(nameField);
+		this.add(numberField);
+		this.add(attackField);
+		this.add(healthField);
+		this.add(modifierField);
+		this.add(iconLabel);
+		this.add(nameLabel);
+		this.add(evolvableLabel);
+		this.add(numberLabel);
+		this.add(attackLabel);
+		this.add(healthLabel);
+		this.add(modifierLabel);
+		this.add(pokedexDropdown);
+		this.add(clearButton);
+		this.add(saveButton);
+		this.add(descriptionArea);
+		this.add(typeArea);
+		this.add(firstType);
+		this.add(secondType);
+		this.add(thirdType);
+		this.add(fourthType);
+		
+		this.setLayout(appLayout);
+		
+	}
+	
+	private void setupLayout()
+	{
+		
+	}
 	
 	
 	
