@@ -3,10 +3,30 @@ package pokemon.model;
 public class Lotad extends Pokemon implements GrassType, WaterType
 {
 
+	public Lotad()
+	{
+		super(387, "Lotad");
+		setup();
+	}
+	
+	public Lotad(String name)
+	{
+		super(387, name);
+		setup();
+	}
+	
 	public Lotad(int number, String name)
 	{
 		super(number, name);
 		
+	}
+	
+	protected void setup()
+	{
+		this.setAtttackPoints(234);
+		this.setCanEvolve(false);
+		this.setEnhancementModifiers(.89);
+		this.setHealthPoints(123);
 	}
 
 	

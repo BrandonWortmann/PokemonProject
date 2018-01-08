@@ -3,10 +3,32 @@ package pokemon.model;
 public class Bulbasaur extends Pokemon implements GrassType
 {
 
+	public Bulbasaur()
+	{
+		super(387, "Bulbasaur");
+		setup();
+	}
+	
+	public Bulbasaur(String name)
+	{
+		super(387, name);
+		setup();
+	}
+	
+	
 	public Bulbasaur(int number, String name)
 	{
 		super(number, name);
+		setup();
 		
+	}
+	
+	protected void setup()
+	{
+		this.setAtttackPoints(234);
+		this.setCanEvolve(true);
+		this.setEnhancementModifiers(.89);
+		this.setHealthPoints(123);
 	}
 
 	
