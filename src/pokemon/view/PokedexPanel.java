@@ -59,7 +59,7 @@ public class PokedexPanel extends JPanel
 		healthField = new JTextField("hp");
 		modifierField = new JTextField("mod");
 		
-		//iconLabel = new JLabel()
+		iconLabel = new JLabel("", new ImageIcon(getClass().getResource("/pokemon/view/images/pokeball.png")), JLabel.CENTER);
 		
 		nameLabel = new JLabel("name");
 		evolvableLabel = new JLabel("evolvable");
