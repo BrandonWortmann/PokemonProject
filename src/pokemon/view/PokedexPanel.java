@@ -107,7 +107,7 @@ public class PokedexPanel extends JPanel
 		this.add(descriptionArea);
 		this.add(typeArea);
 		this.add(firstType);
-		this.add(secondType);
+		this.add(secondType); 
 		this.add(thirdType);
 		this.add(fourthType);
 		
