@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public abstract class Pokemon
 {
 	private int healthPoints;
-	private int atttackPoints;
+	private int attackPoints;
 	private int number;
-	private double enhancementModifiers;
+	private double enhancementModifier;
 	private String name;
 	private boolean canEvolve;
 	
@@ -90,25 +90,25 @@ public abstract class Pokemon
 	/**
 	 * @return the atttackPoints
 	 */
-	public int getAtttackPoints()
+	public int getAttackPoints()
 	{
-		return atttackPoints;
+		return attackPoints;
 	}
 
 	/**
 	 * @param atttackPoints the atttackPoints to set
 	 */
-	public void setAtttackPoints(int atttackPoints)
+	public void setAttackPoints(int atttackPoints)
 	{
-		this.atttackPoints = atttackPoints;
+		this.attackPoints = atttackPoints;
 	}
 
 	/**
 	 * @return the enhancementModifiers
 	 */
-	public double getEnhancementModifiers()
+	public double getEnhancementModifier()
 	{
-		return enhancementModifiers;
+		return enhancementModifier;
 	}
 
 	/**
@@ -116,7 +116,7 @@ public abstract class Pokemon
 	 */
 	public void setEnhancementModifiers(double enhancementModifiers)
 	{
-		this.enhancementModifiers = enhancementModifiers;
+		this.enhancementModifier = enhancementModifiers;
 	}
 
 	/**

@@ -17,7 +17,7 @@ public class Suicune extends Pokemon implements WaterType
 	
 	protected void setup()
 	{
-		this.setAtttackPoints(234);
+		this.setAttackPoints(234);
 		this.setCanEvolve(false);
 		this.setEnhancementModifiers(.89);
 		this.setHealthPoints(123);

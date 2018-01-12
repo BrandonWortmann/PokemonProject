@@ -23,7 +23,7 @@ public class Ivysaur extends Bulbasaur implements GrassType
 	
 	protected void setup()
 	{
-		this.setAtttackPoints(234);
+		this.setAttackPoints(234);
 		this.setCanEvolve(false);
 		this.setEnhancementModifiers(.89);
 		this.setHealthPoints(123);

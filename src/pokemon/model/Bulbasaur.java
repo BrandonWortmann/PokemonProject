@@ -25,7 +25,7 @@ public class Bulbasaur extends Pokemon implements GrassType
 	
 	protected void setup()
 	{
-		this.setAtttackPoints(234);
+		this.setAttackPoints(234);
 		this.setCanEvolve(true);
 		this.setEnhancementModifiers(.89);
 		this.setHealthPoints(123);
