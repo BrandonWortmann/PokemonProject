@@ -9,10 +9,10 @@ import pokemon.controller.PokemonController;
 
 public class PokedexPanel extends JPanel
 {
-	
+
 	private PokemonController appController;
 	private SpringLayout appLayout;
-	
+
 	private JLabel healthLabel;
 	private JLabel attackLabel;
 	private JLabel nameLabel;
@@ -20,45 +20,40 @@ public class PokedexPanel extends JPanel
 	private JLabel evolvableLabel;
 	private JLabel modifierLabel;
 	private JLabel iconLabel;
-	
+
 	private JCheckBox evolvableBox;
 	private JTextField nameField;
 	private JTextField numberField;
 	private JTextField attackField;
 	private JTextField healthField;
 	private JTextField modifierField;
-	
+
 	private JTextArea descriptionArea;
 	private JTextArea typeArea;
-	
+
 	private JButton saveButton;
 	private JButton clearButton;
 	private JComboBox pokedexDropdown;
-	
+
 	private JPanel firstType;
 	private JPanel secondType;
 
-	
-	
-	
-	
-	
 	public PokedexPanel(PokemonController appController)
 	{
 		super();
 		this.appController = appController;
-		
+
 		appLayout = new SpringLayout();
-		
+
 		evolvableBox = new JCheckBox();
 		nameField = new JTextField("name");
 		numberField = new JTextField("##");
 		attackField = new JTextField("ap");
 		healthField = new JTextField("hp");
 		modifierField = new JTextField("mod");
-		
+
 		iconLabel = new JLabel("", new ImageIcon(getClass().getResource("/pokemon/view/images/pokeball.png")), JLabel.CENTER);
-		
+
 		nameLabel = new JLabel("name");
 		evolvableLabel = new JLabel("evolvable");
 		numberLabel = new JLabel("number");
@@ -68,27 +63,25 @@ public class PokedexPanel extends JPanel
 		pokedexDropdown = new JComboBox();
 		clearButton = new JButton("clear");
 		saveButton = new JButton("save");
-		
+
 		descriptionArea = new JTextArea(5, 10);
 		typeArea = new JTextArea(4, 15);
-		
+
 		firstType = new JPanel();
 		secondType = new JPanel();
-		
-		
+
 		setupPanel();
 		setupLayout();
 		setupComboBox();
 		setupTypePanels();
 		setupListeners();
-		updatePokedexInfo(pokedexDropdown.getSelectedIndex());	
+		updatePokedexInfo(pokedexDropdown.getSelectedIndex());
 		updateImage();
 		updateTypePanels();
 		repaint();
-		
+
 	}
-	
-	
+
 	private void setupPanel()
 	{
 		this.add(evolvableBox);
@@ -110,15 +103,12 @@ public class PokedexPanel extends JPanel
 		this.add(descriptionArea);
 		this.add(typeArea);
 		this.add(firstType);
-		this.add(secondType); 
+		this.add(secondType);
 
-		
 		this.setLayout(appLayout);
-		
-		
-		
+
 	}
-	
+
 	private void setupLayout()
 	{
 		appLayout.putConstraint(SpringLayout.EAST, nameField, -10, SpringLayout.EAST, this);
@@ -180,10 +170,10 @@ public class PokedexPanel extends JPanel
 		appLayout.putConstraint(SpringLayout.WEST, secondType, 316, SpringLayout.WEST, this);
 		appLayout.putConstraint(SpringLayout.NORTH, secondType, 6, SpringLayout.SOUTH, evolvableBox);
 	}
-	
+
 	private void updatePokedexInfo(int index)
 	{
-		nameField .setText(appController.getPokedex().get(index).getName());
+		nameField.setText(appController.getPokedex().get(index).getName());
 		evolvableBox.setSelected(appController.getPokedex().get(index).isCanEvolve());
 		numberField.setText(appController.getPokedex().get(index).getNumber() + "");
 		attackField.setText(appController.getPokedex().get(index).getAttackPoints() + "");
@@ -192,44 +182,67 @@ public class PokedexPanel extends JPanel
 		descriptionArea.setText(appController.getPokedex().get(index).toString());
 		typeArea.setText("");
 		String[] types = appController.getPokedex().get(pokedexDropdown.getSelectedIndex()).getPokemonTypes();
-		for(int i = 0; i > types.length; i++)
+		for (int i = 0; i > types.length; i++)
 		{
 			typeArea.append(types[i] + "\n");
 		}
-		
-		
+
 	}
-	
-	
-	
+
 	private void setupComboBox()
 	{
 		DefaultComboBoxModel pokemonModel = new DefaultComboBoxModel(appController.convertPokedex());
 		pokedexDropdown.setModel(pokemonModel);
 	}
-	
+
 	private void setupTypePanels()
 	{
 		firstType.setSize(50, 50);
 		secondType.setSize(50, 50);
 	}
-	
+
 	private void updateTypePanels()
 	{
 		String[] types = appController.getPokedex().get(pokedexDropdown.getSelectedIndex()).getPokemonTypes();
-		if (types[0].equals("FireType")) firstType.setBackground(Color.RED);
-		else if (types[0].equals("GrassType")) firstType.setBackground(Color.GREEN);
-		else if (types[0].equals("WaterType")) firstType.setBackground(Color.BLUE);
-		else firstType.setBackground(new Color(0,0,0,0));
-		if(types.length == 2)
+		if (types[0].equals("FireType"))
 		{
-			if(types[0].equals("FireType")) secondType.setBackground(Color.RED);
-			else if (types[1].equals("GrassType")) secondType.setBackground(Color.GREEN);
-			else if (types[1].equals("WaterType")) secondType.setBackground(Color.BLUE);
-			else secondType.setBackground(new Color(0,0,0,0));
+			firstType.setBackground(Color.RED);
 		}
+		else if (types[0].equals("GrassType"))
+		{
+			firstType.setBackground(Color.GREEN);
+		}
+		else if (types[0].equals("WaterType"))
+		{
+			firstType.setBackground(Color.BLUE);
+		}
+		else
+		{
+			firstType.setBackground(new Color(0, 0, 0, 0));
+		}
+
+		if (types.length == 2)
+		{
+			if (types[1].equals("FireType"))
+			{
+				secondType.setBackground(Color.RED);
+			}
+			else if (types[1].equals("GrassType"))
+			{
+				secondType.setBackground(Color.GREEN);
+			}
+			else if (types[1].equals("WaterType"))
+			{
+				secondType.setBackground(Color.BLUE);
+			}
+		}
+		else
+		{
+			secondType.setBackground(new Color(0, 0, 0, 0));
+		}
+
 	}
-	
+
 	private void updateImage()
 	{
 		String path = "/pokemon/view/images/";
@@ -237,7 +250,7 @@ public class PokedexPanel extends JPanel
 		String name = pokedexDropdown.getSelectedItem().toString();
 		String extension = ".png";
 		ImageIcon pokemonIcon;
-		
+
 		try
 		{
 			pokemonIcon = new ImageIcon(getClass().getResource(path + name + extension));
@@ -246,10 +259,10 @@ public class PokedexPanel extends JPanel
 		{
 			pokemonIcon = new ImageIcon(getClass().getResource(path + defaultName + extension));
 		}
-		
+
 		iconLabel.setIcon(pokemonIcon);
 	}
-	
+
 	private void setupListeners()
 	{
 		pokedexDropdown.addActionListener(new ActionListener()
@@ -261,9 +274,9 @@ public class PokedexPanel extends JPanel
 				updateImage();
 				updateTypePanels();
 				repaint();
-				
+
 			}
-			
+
 		});
 	}
 
