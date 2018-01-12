@@ -79,10 +79,13 @@ public class PokedexPanel extends JPanel
 		setupPanel();
 		setupLayout();
 		setupComboBox();
-		updatePokedexInfo(pokedexDropdown.getSelectedIndex());
 		setupTypePanels();
-		updateTypePanels();
+		setupListeners();
+		updatePokedexInfo(pokedexDropdown.getSelectedIndex());	
 		updateImage();
+		updateTypePanels();
+		repaint();
+		
 	}
 	
 	
@@ -247,9 +250,21 @@ public class PokedexPanel extends JPanel
 		iconLabel.setIcon(pokemonIcon);
 	}
 	
-	private void setupLiseners()
+	private void setupListeners()
 	{
-		//pokedexDropdown.addActionListener(new ActionLstener);
+		pokedexDropdown.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent selection)
+			{
+				int selectedPokemonIndex = pokedexDropdown.getSelectedIndex();
+				updatePokedexInfo(selectedPokemonIndex);
+				updateImage();
+				updateTypePanels();
+				repaint();
+				
+			}
+			
+		});
 	}
 
 }
