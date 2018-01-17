@@ -1,0 +1,6 @@
+Bulbasaur,387,123,400,0.89,true
+Charmander,387,123,234,0.89,false
+Ivysaur,387,123,234,0.89,false
+Lotad,387,123,234,0.89,false
+Squirtle,387,123,234,0.89,false
+Suicune,387,123,234,0.89,false

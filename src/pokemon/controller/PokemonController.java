@@ -27,14 +27,32 @@ public class PokemonController
 		return pokedex;
 	}
 	
-	public boolean isValidIneger(String input)
+	public boolean isValidInteger(String input)
 	{
-		return false;
+		try
+		{
+			Integer.parseInt(input);
+		}
+		catch (NumberFormatException error)
+		{
+			return false;
+		}
+		
+		return true;
 	}
 	
 	public boolean isValidDouble(String input)
 	{
-		return false;
+		try
+		{
+			Double.parseDouble(input);
+		}
+		catch (NumberFormatException error)
+		{
+			return false;
+		}
+		
+		return true;
 	}
 	
 	public String[] convertPokedex()
@@ -58,6 +76,8 @@ public class PokemonController
 		selected.setEnhancementModifiers(modify);
 		selected.setName(name);
 		selected.setHealthPoints(health);
+		
+		FileController.savePokemonToFile((ArrayList<Pokemon>) pokedex);
 	}
 
 	
