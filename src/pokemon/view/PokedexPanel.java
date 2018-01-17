@@ -122,6 +122,13 @@ public class PokedexPanel extends JPanel
 		typeArea.setEditable(false);
 		evolvableBox.setEnabled(false);
 		
+		this.setBackground(Color.MAGENTA);
+		nameField.setBackground(Color.CYAN);
+		numberField.setBackground(Color.YELLOW);
+		attackField.setBackground(Color.CYAN);
+		healthField.setBackground(Color.YELLOW);
+		modifierField.setBackground(Color.CYAN);
+		
 
 	}
 
