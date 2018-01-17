@@ -117,6 +117,7 @@ public class PokedexPanel extends JPanel
 		
 		descriptionArea.setLineWrap(true);
 		descriptionArea.setWrapStyleWord(true);
+	
 
 	}
 
